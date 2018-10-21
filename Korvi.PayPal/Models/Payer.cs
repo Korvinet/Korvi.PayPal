@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Korvi.PayPal
+namespace Korvi.PayPal.Models
 {
-    public class Class1
+    public class Payer
     {
+        public string payment_method = "paypal";
     }
 }
