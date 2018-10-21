@@ -68,19 +68,19 @@ namespace Korvi.PayPal
             _accessToken = JsonConvert.DeserializeObject<AccesToken>(responseFromServer);
         }
 
-        public CreatePaymentResponse CreatePayment(CreatePaymentRequest payment)
+        public PaymentResponse CreatePayment(CreatePaymentRequest payment)
         {
             Authenticate();
             string url = $"{API_URL}/v1/payments/payment";
-            return Post<CreatePaymentResponse>(url, payment);
+            return Post<PaymentResponse>(url, payment);
         }
 
-        public object ExecutePayment(string paymentId, string payerId)
+        public PaymentResponse ExecutePayment(string paymentId, string payerId)
         {
             Authenticate();
             string url = $"{API_URL}/v1/payments/payment/{paymentId}/execute";
             var body = new { payer_id = payerId };
-            return Post<object>(url, body);
+            return Post<PaymentResponse>(url, body);
         }
 
         #region Private methods 

@@ -8,6 +8,8 @@ namespace Korvi.PayPal.Models
 {
     public class Payer
     {
-        public string payment_method = "paypal";
+        public string payment_method { get; set; } = "paypal";
+
+        public PayerInfo payer_info { get; set; }
     }
 }

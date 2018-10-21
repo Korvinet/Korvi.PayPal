@@ -49,8 +49,9 @@
     <Compile Include="Models\Amount.cs" />
     <Compile Include="Models\AmountDetails.cs" />
     <Compile Include="Models\CreatePaymentRequest.cs" />
-    <Compile Include="Models\CreatePaymentResponse.cs" />
+    <Compile Include="Models\PaymentResponse.cs" />
     <Compile Include="Models\Payer.cs" />
+    <Compile Include="Models\PayerInfo.cs" />
     <Compile Include="Models\RedirectUrls.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="PayPalClient.cs" />
