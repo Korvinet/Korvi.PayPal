@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Korvi.PayPal.NET452</id>
+    <version>0.0.2</version>
+    <title>Korvi.PayPal.NET452</title>
+    <authors>Korvi</authors>
+    <owners>José Manuel Martínez</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Korvinet/Korvi.PayPal</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PayPal REST SDK for .NET 4.5.2</description>
+    <releaseNotes>Create and execute payments.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>PayPal.net PayPal PayPal SDK</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>
+  </metadata>
+</package>
