@@ -54,7 +54,6 @@ namespace Korvi.PayPal
             string encoded = Convert.ToBase64String(bytes);
             request.Headers.Add("Authorization", $"Basic {encoded}");
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             Stream reqStream = request.GetRequestStream();
             reqStream.Write(content, 0, content.Length);
             reqStream.Close();
@@ -108,7 +107,6 @@ namespace Korvi.PayPal
             string parsedContent = JsonConvert.SerializeObject(data, settings);
             byte[] bytes = Encoding.UTF8.GetBytes(parsedContent);
 
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             Stream stream = request.GetRequestStream();
             stream.Write(bytes, 0, bytes.Length);
             stream.Close();
