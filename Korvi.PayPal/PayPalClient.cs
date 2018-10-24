@@ -15,7 +15,7 @@ namespace Korvi.PayPal
     public class PayPalClient
     {
         const string SANDBOX_URL = "https://api.sandbox.paypal.com";
-        const string URL = "https://api.sandbox.paypal.com";
+        const string URL = "https://api.paypal.com";
 
         bool _isSandbox;
         string _client;
@@ -108,6 +108,7 @@ namespace Korvi.PayPal
             string parsedContent = JsonConvert.SerializeObject(data, settings);
             byte[] bytes = Encoding.UTF8.GetBytes(parsedContent);
 
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             Stream stream = request.GetRequestStream();
             stream.Write(bytes, 0, bytes.Length);
             stream.Close();
